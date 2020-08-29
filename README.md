@@ -1,6 +1,6 @@
 ## PkgVersionHelper
 
-Do you often wonder: *Do I have the latest dependencies for my packages in the `[compat]` section of Project.toml?
+Do you often wonder: *Do I have the latest dependencies for my packages in the `[compat]` section of Project.toml?*
 
 This is simple package that can help you check whether you have the most up-to-date package in your Project.toml.
 
