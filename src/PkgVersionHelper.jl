@@ -13,7 +13,12 @@ end
 
 
 """
-    Checks which package is not up to date
+    upcheck()
+
+Checks which package is not up to date. It wil return a
+`Dict{String, Tuple{VersionNumber, VersionNumber}}` with these key-value paiars
+
+    `PkgName => (installed_version, latest_version)`
 """
 function upcheck()
     deps = Pkg.dependencies()
