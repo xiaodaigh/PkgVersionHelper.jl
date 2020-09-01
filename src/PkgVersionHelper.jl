@@ -23,8 +23,13 @@ Checks which package is not up to date. It wil return a
 function upcheck()
     deps = Pkg.dependencies()
     installs = Dict{String, Tuple{VersionNumber, VersionNumber}}()
-    for (_, dep) in deps
+    for (uuid, dep) in deps
+        # is it direct dependency?
         dep.is_direct_dep || continue
+
+        # is it a standard library
+        Pkg.Types.is_stdlib(uuid) && continue
+
         try
             if max_ver(dep.name) <= dep.version
                 continue

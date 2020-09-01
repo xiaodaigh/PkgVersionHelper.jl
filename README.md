@@ -18,7 +18,7 @@ This will check through the direct dependencies (i.e. those packages in your Pro
 PkgName => (installed_version, latest_version)
 ```
 
-For example, this was the output for one of my pacakges
+For example, this was the output for one of my packages
 
 ```
 julia> upcheck()
