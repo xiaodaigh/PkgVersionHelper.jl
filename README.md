@@ -29,6 +29,6 @@ Dict{String,Tuple{VersionNumber,VersionNumber}} with 2 entries:
 
 ### Why?
 
-CompatHelper.jl is great but sometimes you are not able to upgrade your packages right away and often you are often left wondering? Do I have the latest dependencies? I am often in such a spot so I've decided to gather [the answers on StackOverflow](https://stackoverflow.com/questions/62667741/julia-is-there-a-way-to-find-the-latest-possible-version-number-of-a-package) and make a simple package.
+CompatHelper.jl is great but sometimes you are not able to upgrade your packages right away and often you are often left wondering "Do I have the latest dependencies?" I am often in such a spot so I've decided to gather [the answers on StackOverflow](https://stackoverflow.com/questions/62667741/julia-is-there-a-way-to-find-the-latest-possible-version-number-of-a-package) and make a simple package.
 
 Thanks to the wonderful @bkamins for helping me with my query.
