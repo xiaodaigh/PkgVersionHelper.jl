@@ -1,7 +1,7 @@
 name = "PkgVersionHelper"
 uuid = "a83a3aaf-d014-45d2-af27-d8a782db1bf5"
 authors = ["ZJ <zhuojia.dai@gmail.com> and contributors"]
-version = "0.1.1"
+version = "0.1.2"
 
 [deps]
 Pkg = "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"
