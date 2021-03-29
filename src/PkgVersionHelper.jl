@@ -13,19 +13,21 @@ end
 
 
 """
-    upcheck()
+    upcheck(; indirect_deps=false)
 
 Checks which package is not up to date. It wil return a
 `Dict{String, Tuple{VersionNumber, VersionNumber}}` with these key-value paiars
 
     `PkgName => (installed_version, latest_version)`
+
+Keyword argument `indirect_deps` if `true` includes the indirect dependencies.
 """
-function upcheck()
+function upcheck(; indirect_deps = false)
     deps = Pkg.dependencies()
     installs = Dict{String, Tuple{VersionNumber, VersionNumber}}()
     for (uuid, dep) in deps
         # is it direct dependency?
-        dep.is_direct_dep || continue
+        dep.is_direct_dep | indirect_deps || continue
 
         # is it a standard library
         Pkg.Types.is_stdlib(uuid) && continue
@@ -36,7 +38,7 @@ function upcheck()
             end
             installs[dep.name] = (dep.version, max_ver(dep.name))
         catch e
-            println("$(dep.name) may not be a registered pacakge")
+            println("$(dep.name) may not be a registered package")
         end
     end
     return installs
