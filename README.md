@@ -1,8 +1,8 @@
 ## PkgVersionHelper
 
-*Do I have the latest dependencies for my packages in the `[compat]` section of Project.toml?*
+*Do I have the latest dependencies for my packages in the `[compat]` section of `Project.toml`?*
 
-This is simple package that can help you check whether you have the most up-to-date package in your Project.toml.
+This package can help you check whether you have the most up-to-date package in your `Project.toml`.
 
 ### Usage
 
@@ -12,7 +12,7 @@ using PkgVersionHelper: upcheck
 upcheck()
 ```
 
-This will check through the direct dependencies (i.e. those packages in your Project.toml) and return a `Dict` like this
+This will check through the direct dependencies (i.e. those packages in your `Project.toml`) and return a `Dict` like this
 
 ```
 PkgName => (installed_version, latest_version)
